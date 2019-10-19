@@ -1,4 +1,4 @@
-package com.example.samplecodes.simpletricks;
+package com.example.simpletricks;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;

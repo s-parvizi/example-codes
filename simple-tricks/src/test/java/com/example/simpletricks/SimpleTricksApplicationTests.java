@@ -1,4 +1,4 @@
-package com.example.samplecodes.simpletricks;
+package com.example.simpletricks;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
