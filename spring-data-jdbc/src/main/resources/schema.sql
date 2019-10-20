@@ -52,3 +52,23 @@ movie integer references movie(id),
 duration text,
 price integer
 );
+
+-- when using list instead of set
+-- create table rental(
+-- id serial primary key,
+-- movie integer references movie(id),
+-- movie_key integer,
+-- duration text,
+-- price integer
+-- );
+
+-- when using map instead of set
+-- create table rental(
+-- id serial primary key,
+-- movie integer references movie(id),
+-- movie_key text,
+-- duration text,
+-- price integer
+-- );
+
+
