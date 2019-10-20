@@ -1,11 +1,19 @@
 
 # Enabling H2 Console
+#spring:
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+
+# MySQL Settings
 spring:
-  h2:
-    console:
-      enabled: true
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: mypass123
+    driver-class-name: com.mysql.jdbc.Driver
 
 logging:
   level:
