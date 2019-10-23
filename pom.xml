@@ -5,7 +5,10 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>spring-data-jdbc</module>
-	</modules>
+        <module>spring-data-rest</module>
+        <module>spring-rest</module>
+        <module>spring-test</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

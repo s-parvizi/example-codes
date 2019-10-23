@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface PetRepository extends CrudRepository<Pet, Integer> {
-
     @Query("select * from pet where name = :name")
     List<Pet> findByName(@Param("name") String name);
 }

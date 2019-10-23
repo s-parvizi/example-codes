@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @SpringBootTest
@@ -58,6 +59,12 @@ class SpringDataJdbcApplicationTests {
         movieRepository.save(movie);
 
         System.out.println(movieRepository.findAll());
+    }
+
+    @Test
+    void test() {
+        testOneToOne();
+        System.out.println(customerRepository.findByNameRowMapper("patrick"));
     }
 
 }
