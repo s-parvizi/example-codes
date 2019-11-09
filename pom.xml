@@ -8,7 +8,13 @@
         <module>spring-data-rest</module>
         <module>spring-rest</module>
         <module>spring-test</module>
-    </modules>
+        <module>java8-samples</module>
+		<module>java9-samples</module>
+		<module>java10-samples</module>
+		<module>java11-samples</module>
+		<module>java12-samples</module>
+		<module>java13-samples</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
