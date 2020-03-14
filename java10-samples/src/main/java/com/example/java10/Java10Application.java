@@ -14,10 +14,22 @@ public class Java10Application {
 
 	@Bean
 	ApplicationRunner applicationRunner(){
-		var programmingLanguage = "Java";
-		return arge->{
+		// Initializers
+	    var programmingLanguage = "Java";
+        System.out.println(programmingLanguage);
+
+	    var myArray = new String[]{"test1", "test2", "test3"};
+	    // Indexes in enhanced for-loops
+        for (var s: myArray){
+            System.out.println(s);
+        }
+
+        // Local variables initialized in a traditional for-loop
+        for (var i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+	    return arge->{
 			// Write code to test after Spring Application Context load
-			System.out.println(programmingLanguage);
 		};
 	}
 
