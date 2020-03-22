@@ -7,7 +7,8 @@
 		<module>spring-data-jdbc-1</module>
 		<module>spring-data-jdbc-2</module>
         <module>spring-data-rest</module>
-        <module>spring-rest</module>
+        <module>spring-rest-server</module>
+        <module>spring-rest-client</module>
         <module>spring-test</module>
         <module>java8-samples</module>
 		<module>java9-samples</module>
