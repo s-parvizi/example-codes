@@ -10,7 +10,7 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 public class StockManagementTest {
 
-    // Stub : Used to test data
+    // Stub (without using Mockito) : Used to test data
     @Test
     public void testCanGetACorrectLocatorCode() {
         ExternalIsbnDataService testWebService = new ExternalIsbnDataService() {
@@ -23,6 +23,7 @@ public class StockManagementTest {
         ExternalIsbnDataService testDatabaseService = new ExternalIsbnDataService() {
             @Override
             public Book lookup(String isbn) {
+
                 return null;
             }
         };
@@ -36,13 +37,33 @@ public class StockManagementTest {
         assertEquals("7396J4", locatorCode);
     }
 
+    // Stub (with Mockito) : Used to test data
+    @Test
+    public void testCanGetACorrectLocatorCodeWithMockito() {
+        ExternalIsbnDataService databaseService = mock(ExternalIsbnDataService.class);
+        ExternalIsbnDataService webService = mock(ExternalIsbnDataService.class);
+
+        when(webService.lookup(anyString())).
+                thenReturn(new Book("0140177396", "of Mice and Men", "J. Steinbeck"));
+        when(databaseService.lookup(anyString())).thenReturn(null);
+
+        StockManager stockManager = new StockManager();
+        stockManager.setWebService(webService);
+        stockManager.setDatabaseService(databaseService);
+
+        String isbn = "0140177396";
+        String locatorCode = stockManager.getLocatorCode(isbn);
+        assertEquals("7396J4", locatorCode);
+    }
+
     // Mock : Used to test behaviour
     @Test
     public void databaseIsUsedIfDataIsPresent() {
         ExternalIsbnDataService databaseService = mock(ExternalIsbnDataService.class);
         ExternalIsbnDataService webService = mock(ExternalIsbnDataService.class);
 
-        when(databaseService.lookup("0140177396")).thenReturn(new Book("0140177396", "abc", "abc"));
+        when(databaseService.lookup("0140177396")).
+                thenReturn(new Book("0140177396", "abc", "abc"));
 
         StockManager stockManager = new StockManager();
         stockManager.setWebService(webService);
