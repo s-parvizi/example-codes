@@ -49,8 +49,8 @@ public class StockManagementTest {
         String isbn = "0140177396";
         String locatorCode = stockManager.getLocatorCode(isbn);
 
-        verify(databaseService, times(1)).lookup("0140177396");
-        verify(webService, times(0)).lookup(anyString());
+        verify(databaseService).lookup("0140177396");
+        verify(webService, never()).lookup(anyString());
     }
 
     @Test
@@ -68,8 +68,8 @@ public class StockManagementTest {
         String isbn = "0140177396";
         String locatorCode = stockManager.getLocatorCode(isbn);
 
-        verify(databaseService, times(1)).lookup("0140177396");
-        verify(webService, times(1)).lookup("0140177396");
+        verify(databaseService).lookup("0140177396");
+        verify(webService).lookup("0140177396");
     }
 
 }
