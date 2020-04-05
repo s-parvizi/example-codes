@@ -10,6 +10,7 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 public class StockManagementTest {
 
+    // Stub : Used to test data
     @Test
     public void testCanGetACorrectLocatorCode() {
         ExternalIsbnDataService testWebService = new ExternalIsbnDataService() {
@@ -35,6 +36,7 @@ public class StockManagementTest {
         assertEquals("7396J4", locatorCode);
     }
 
+    // Mock : Used to test behaviour
     @Test
     public void databaseIsUsedIfDataIsPresent() {
         ExternalIsbnDataService databaseService = mock(ExternalIsbnDataService.class);
@@ -53,6 +55,7 @@ public class StockManagementTest {
         verify(webService, never()).lookup(anyString());
     }
 
+    // Mock : Used to test behaviour
     @Test
     public void webserviceIsUsedIfDataIsNotPresentInDatabase() {
         ExternalIsbnDataService databaseService = mock(ExternalIsbnDataService.class);
