@@ -1,4 +1,4 @@
-package com.example.tddtest;
+package com.example.tddtest.book;
 
 import org.junit.Before;
 import org.junit.Test;

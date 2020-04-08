@@ -1,4 +1,4 @@
-package com.example.tddtest;
+package com.example.tddtest.book;
 
 class IsbnValidator {
 
