@@ -4,19 +4,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
 	<modules>
+		<module>java8</module>
+		<module>java9</module>
+		<module>java10</module>
+		<module>java11</module>
+		<module>java12</module>
+		<module>java13</module>
+		<module>java14</module>
+		<module>simple-tricks</module>
 		<module>spring-data-jdbc-1</module>
 		<module>spring-data-jdbc-2</module>
-        <module>spring-data-rest</module>
-        <module>spring-rest-server</module>
-        <module>spring-rest-client</module>
-        <module>spring-test</module>
-        <module>tdd-test</module>
-        <module>java8-samples</module>
-		<module>java9-samples</module>
-		<module>java10-samples</module>
-		<module>java11-samples</module>
-		<module>java12-samples</module>
-		<module>java13-samples</module>
+		<module>spring-data-rest</module>
+		<module>spring-rest-client</module>
+		<module>spring-rest-server</module>
+		<module>spring-test</module>
+		<module>tdd-test</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
