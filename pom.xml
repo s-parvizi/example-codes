@@ -5,7 +5,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>algorithms</module>
-		<module>cleancode</module>
+		<module>clean-code</module>
 		<module>data-structures</module>
 		<module>java8</module>
 		<module>java9</module>
