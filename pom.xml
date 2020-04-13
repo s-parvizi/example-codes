@@ -5,6 +5,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>algorithms</module>
+		<module>cleancode</module>
 		<module>data-structures</module>
 		<module>java8</module>
 		<module>java9</module>
@@ -13,6 +14,7 @@
 		<module>java12</module>
 		<module>java13</module>
 		<module>java14</module>
+		<module>multithreading</module>
 		<module>simple-tricks</module>
 		<module>spring-data-jdbc-1</module>
 		<module>spring-data-jdbc-2</module>
