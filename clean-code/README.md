@@ -64,6 +64,56 @@
         so a function should either do something or should handle errors but it shouldn't do both
     
 **Form:**
-
+- Comments:
+    - comments are failures
+    - comments are lies
+    - Good comments: 
+        - informative comments
+        - clarification and explanation of intent
+        - warning of consequences
+        - TODO comments
+        - Public API documentation (Best documentation is the documentation you don't have to write)
+    - Bad comments:
+        - Mumbling
+        - Redundant explanation
+        - Mandated redundancy
+        - Journal comments
+        - Big banner comments
+        - Closing brace comments
+        - Attribution comments
+        - HTML in comments
+        - Non-Local Information
+- Explanatory structure (instead of huge amount of comments)
+- Formatting (white spaces, communication, getting your code to communicate is more important than getting it to work)
+- File size (smaller is better, keep your file sizes small)
+- Vertical Formatting
+    - one blank line between methods
+    - one line to separate method from variables outside
+    - one line between public constants and private variables
+    - one line between variable definition and other part of a method
+    - things that are related to each other should be vertically close to each other
+- Horizontal Formatting
+    - you never have to scroll to right to see it
+    - lines should be less than 100 or 120
+- Indentation
+    - everybody in the team should use the same rule
+- Classes
+    - variables should not be appear from the outside of the class
+    - minimize using getters and setters, the more getters and setters a class has the less cohesive that class is
+    - the less implementation you expose the more opportunity you have to make polymorphic classes
+- Data Structures
+    - Data structures has public variables without method and class has private variables and public methods
+    - Data structures and switch statements are related in the same way that classes and polymorphism are related
+    - classes protect us against new types but expose us to new methods. data structures protect us against new methods 
+    but expose us to new types
+    - is there any way to get protection from both? new methods and new types? expression problem
+    solution: design patterns
+    - key of independent deployability is to know which form to use and when. 
+    - we use classes and objects when its types more likely to be added 
+    - we use data structures and switch statements when methods are likely to be added
+- Boundaries
+- The impedance mismatch (relational data bases and object oriented design, ORM)
+      
 **TDD:**
+
 
