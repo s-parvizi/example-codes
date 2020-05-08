@@ -14,6 +14,7 @@
 		<module>java12</module>
 		<module>java13</module>
 		<module>java14</module>
+		<module>kafka</module>
 		<module>multithreading</module>
 		<module>simple-tricks</module>
 		<module>spring-data-jdbc-1</module>

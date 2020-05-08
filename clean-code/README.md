@@ -46,7 +46,7 @@
             - created locally
             - instance variables
             - globals
-        - you may not call methods ob objects that are:
+        - you may not call methods of objects that are:
             - returned from a previous method call 
 - OOP Programming (1962-66)   
 - Structured Programming (1967 !!!, the youngest!!!, but some of the ideas started from 1940)
