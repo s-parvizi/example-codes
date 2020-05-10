@@ -115,6 +115,22 @@
 - The impedance mismatch (relational data bases and object oriented design, ORM)
       
 **TDD:**
-- good tests make change and code cleanup easier
-- 
+- Good tests make change and code cleanup easier
+- The Three laws of TDD:
+    - write **NO** production code except to pass a failing test
+    - write only **enough** of a test to demonstrate a failure
+    - write only **enough** production code to pass the test
+- Red, Green, Refactor
+- You get a better design if you write your tests first
+    - you have to design the production code to be accessible from the test     
+    - it influences the production code and you write codes that are testable
+    - result will be decoupled production codes that are testable nicely
+- Codes rots if developers can't change and clean it up during time, and having
+good tests make it possible to easily change and cleanup codes
+- The tests allow you clean the code, the tests stop the code from rotting
+- Good design and architecture cause good flexibility, maintainability and scalability
+- Good suit of test makes system more flexible
+- If every line of production code was written to make a failing unit test pass, 
+then you will trust your test suit
+- If you write your tests after the fact, the you will never truest that test suite
 
