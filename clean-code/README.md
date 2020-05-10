@@ -115,5 +115,6 @@
 - The impedance mismatch (relational data bases and object oriented design, ORM)
       
 **TDD:**
-
+- good tests make change and code cleanup easier
+- 
 
