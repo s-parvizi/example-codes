@@ -6,6 +6,7 @@
 	<modules>
 		<module>algorithms</module>
 		<module>clean-code</module>
+		<module>code-contest</module>
 		<module>data-structures</module>
 		<module>java8</module>
 		<module>java9</module>
