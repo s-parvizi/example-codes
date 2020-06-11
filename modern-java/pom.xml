@@ -7,9 +7,14 @@
         <groupId>com.example</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
+    <properties>
+        <java.version>10</java.version>
+    </properties>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java9</artifactId>
+    <artifactId>modern-java</artifactId>
 
 
 </project>
