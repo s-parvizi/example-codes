@@ -2,6 +2,7 @@
 
 **Clean Code:**  
 
+**1. FUNDAMENTALS:**
 **Names:**
 - Choose descriptive and unambiguous names.
 - Make meaningful distinction without misinformation.
@@ -133,4 +134,16 @@ good tests make it possible to easily change and cleanup codes
 - If every line of production code was written to make a failing unit test pass, 
 then you will trust your test suit
 - If you write your tests after the fact, the you will never truest that test suite
+- Test Driven Development save time on debugging so it's speed up the development
+- The test test the production code and the production code test the test
+- If some few changes in the production code cause huge amount of changes on tests then it is something wrong with those tests
+- Tests should be well designed like production codes
+- When you write tests first, you can trust them, because you write every line of production code is tested
+- With test, production code is flexible and without the test production code rots
+- The goal of professional development team is that QA will find nothing
+- The code should be 100% covered, but 100% is a goal, we should try to achieve
+
+**2. SOLID PRINCIPLES:**
+
+
 
