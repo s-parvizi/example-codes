@@ -1,4 +1,4 @@
-package com.example.multithreading;
+package com.example.multithreading.ebook.chapter1;
 
 import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
