@@ -23,7 +23,7 @@ public class AppleTree {
         try {
             System.out.printf("%s started picking apples from %s \n", workerName, treeLabel);
             TimeUnit.SECONDS.sleep(1);
-            System.out.printf("%s picked %d Apple from %s \n", workerName, numberOfApples, treeLabel);
+            System.out.printf("%s picked %d Apples from %s \n", workerName, numberOfApples, treeLabel);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

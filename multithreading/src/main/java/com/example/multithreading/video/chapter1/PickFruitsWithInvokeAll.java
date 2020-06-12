@@ -6,6 +6,7 @@ import java.util.concurrent.ForkJoinPool;
 import static java.util.Arrays.asList;
 
 public class PickFruitsWithInvokeAll {
+
     public static void main(String[] args) {
         AppleTree[] appleTrees = AppleTree.newTreeGarden(6);
 
