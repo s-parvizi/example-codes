@@ -1,39 +1,38 @@
-package com.example.multithreading.video.chapter1;
+package com.example.multithreading.video.section1;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 import java.util.stream.IntStream;
 
-public class PickFruitsWithRecursiveTask {
+public class ComputeSumWithRecursiveTask {
 
     public static void main(String[] args) {
-        AppleTree[] appleTrees = AppleTree.newTreeGarden(12);
+        int[] numbers = new int[] {1,2,3,4,5,6,7,8,9,10};
         ForkJoinPool pool = ForkJoinPool.commonPool();
 
-        PickFruitTask task = new PickFruitTask(appleTrees, 0, appleTrees.length - 1);
-        int result = pool.invoke(task);
+        ComputeSumTask task = new ComputeSumTask(numbers, 0, numbers.length - 1);
+        int sum = pool.invoke(task);
 
-        System.out.println();
-        System.out.println("Total apples picked: " + result);
+        System.out.println(sum);
     }
 
-    public static class PickFruitTask extends RecursiveTask<Integer> {
-        private final AppleTree[] appleTrees;
+    public static class ComputeSumTask extends RecursiveTask<Integer> {
+        private final int[] numbers;
         private final int startInclusive;
         private final int endInclusive;
 
-        private final int taskThreadholds = 4;
+        private final int taskThreadholds = 2;
 
 
-        public PickFruitTask(AppleTree[] appleTrees, int startInclusive, int endInclusive) {
-            this.appleTrees = appleTrees;
+        public ComputeSumTask(int[] numbers, int startInclusive, int endInclusive) {
+            this.numbers = numbers;
             this.startInclusive = startInclusive;
             this.endInclusive = endInclusive;
         }
 
         protected Integer doCompute() {
             return IntStream.rangeClosed(startInclusive, endInclusive)
-                    .map(i -> appleTrees[i].pickApples(""))
+                    .map(i -> numbers[i])
                     .sum();
         }
 
@@ -45,8 +44,8 @@ public class PickFruitsWithRecursiveTask {
 
             int midpont = startInclusive + (endInclusive - startInclusive) / 2;
 
-            PickFruitTask leftSum = new PickFruitTask(appleTrees, startInclusive, midpont);
-            PickFruitTask rightSum = new PickFruitTask(appleTrees, midpont + 1, endInclusive);
+            ComputeSumTask leftSum = new ComputeSumTask(numbers, startInclusive, midpont);
+            ComputeSumTask rightSum = new ComputeSumTask(numbers, midpont + 1, endInclusive);
 
             rightSum.fork();
             return leftSum.compute() + rightSum.join();

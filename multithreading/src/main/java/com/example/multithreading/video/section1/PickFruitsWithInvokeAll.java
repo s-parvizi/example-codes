@@ -1,4 +1,4 @@
-package com.example.multithreading.video.chapter1;
+package com.example.multithreading.video.section1;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ForkJoinPool;

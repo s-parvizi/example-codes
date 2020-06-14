@@ -1,4 +1,4 @@
-package com.example.multithreading.video.chapter1;
+package com.example.multithreading.video.section1;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +14,7 @@ public class AppleTree {
     public static AppleTree[] newTreeGarden(int size) {
         AppleTree[] appleTrees = new AppleTree[size];
         for (int i = 0; i < appleTrees.length; i++) {
-            appleTrees[i] = new AppleTree("Tree#" + i);
+            appleTrees[i] = new AppleTree("🌳#" + i);
         }
         return appleTrees;
     }
@@ -23,7 +23,7 @@ public class AppleTree {
         try {
             System.out.printf("%s started picking apples from %s \n", workerName, treeLabel);
             TimeUnit.SECONDS.sleep(1);
-            System.out.printf("%s picked %d Apples from %s \n", workerName, numberOfApples, treeLabel);
+            System.out.printf("%s picked %d 🍏s from %s \n", workerName, numberOfApples, treeLabel);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

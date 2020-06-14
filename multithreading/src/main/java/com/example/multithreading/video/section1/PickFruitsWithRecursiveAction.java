@@ -1,4 +1,4 @@
-package com.example.multithreading.video.chapter1;
+package com.example.multithreading.video.section1;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
