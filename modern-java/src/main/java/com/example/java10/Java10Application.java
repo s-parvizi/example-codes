@@ -1,4 +1,4 @@
-package com.example.java10;
+package com.example.kafka;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;

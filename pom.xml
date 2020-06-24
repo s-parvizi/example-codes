@@ -11,6 +11,7 @@
 		<module>modern-java</module>
 		<module>kafka</module>
 		<module>multithreading</module>
+		<module>reactive-programming</module>
 		<module>simple-tricks</module>
 		<module>spring-data-jdbc-1</module>
 		<module>spring-data-jdbc-2</module>
