@@ -144,6 +144,9 @@ then you will trust your test suit
 - The code should be 100% covered, but 100% is a goal, we should try to achieve
 
 **2. SOLID PRINCIPLES:**
-
+**Foundations:**
+- The source code is a document 
+- The source code is the design
+-  
 
 
