@@ -147,6 +147,43 @@ then you will trust your test suit
 **Foundations:**
 - The source code is a document 
 - The source code is the design
--  
+**Bad Design:**
+- Rigidity
+    - tendency of a system to be hard to change
+    - cost of change is high
+    - tiny little changes cause the whole system rebuild
+- Fragility
+    - a system is fragile when small changes to one module causes other unrelated module to miss behave
+    - freezes the development 
+- Immobility
+    - a system is immobile when its internal components can not be easily extracted and reused in new environment
+    - the strategy to avoid immobility our architecture should be like that central abstraction of system is decoupled from UI, DB, Frameworks
+**Viscosity:**
+    - a system is viscose when necessary operation like building and testing are difficult to perform and take a long time to execute
+**Needless Complexity:**
+    - focus the design of software on the current requirements + suit of test that make the change easy later
+    - smells accumulate over time that caused by sequence of bad decisions that is motivated by carelessness, fear and false experience 
+**OOD Principles (Dependency Management Principles):**
+    - SOLID: control the relationships and operations between classes
+      - The **S**ingle Responsibility Principle
+      - The **O**pen Closed Principle
+      - The **L**iskov Substitution Principle
+      - The **I**nterface Segregation Principle
+      - The **D**ependency Inversion Principle
+    - Component Cohesion Principles: describe the forces that cause classes to be grouped in the independently deployable components
+      - The Release-Reuse Equivalency Principle
+      - The Common Closure Principle
+      - The Common Reuse Principle
+    - Component Coupling Principles: describe the forces that govern the dependencies between components
+      - The Acyclic Dependencies Principle 
+      - The Stable Dependencies Principle
+      - The Stable Abstractions Principle
+Taking together theses principles form a regime of dependency management which describes how we us OO to build application out of classes and compose them inti independent deployable components with high cohesion and low coupling
+Software is expensive to design but cheap to build!       
+      
+
+
+
+
 
 
