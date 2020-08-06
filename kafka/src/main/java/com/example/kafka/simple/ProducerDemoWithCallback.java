@@ -1,4 +1,4 @@
-package com.example.kafka;
+package com.example.kafka.simple;
 
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -6,12 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
-import java.util.concurrent.ExecutionException;
 
-public class ProducerDemoKeys {
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+public class ProducerDemoWithCallback {
+    public static void main(String[] args) {
 
-        Logger logger = LoggerFactory.getLogger(ProducerDemoKeys.class);
+        Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallback.class);
 
         String bootstrapSevers = "127.0.0.1:9092";
 
@@ -27,14 +26,7 @@ public class ProducerDemoKeys {
         for (int i = 0; i < 10; i++) {
 
             // Create a producer record
-            String topic = "first_topic";
-            String value = "hello world " + i;
-            String key = "id_" + i;
-
-            ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
-
-            logger.info("Key: " + key); // log the key
-            // same key always goes to same partition
+            ProducerRecord<String, String> record = new ProducerRecord<>("first_topic", "hello world " + i);
 
             // Send Data - asynchronous
             producer.send(record, new Callback() {
@@ -52,7 +44,7 @@ public class ProducerDemoKeys {
                         logger.error("Error while producing", e);
                     }
                 }
-            }).get();  // block to send to make it synchronous and see the result better - don't do this in production!
+            });
 
         }
 
