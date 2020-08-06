@@ -179,7 +179,9 @@ then you will trust your test suit
       - The Stable Dependencies Principle
       - The Stable Abstractions Principle
 Taking together theses principles form a regime of dependency management which describes how we us OO to build application out of classes and compose them inti independent deployable components with high cohesion and low coupling
-Software is expensive to design but cheap to build!       
+Software is expensive to design but cheap to build!
+**Single Responsibility:**
+       
       
 
 
