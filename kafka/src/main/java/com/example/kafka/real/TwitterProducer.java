@@ -25,12 +25,12 @@ public class TwitterProducer {
 
     Logger logger = LoggerFactory.getLogger(TwitterProducer.class.getName());
 
-    private String consumerKey = "rDBBWmhnhjsDHlcTPrpQUBsG8";
-    private final String consumerSecret = "Ai3jN25iToPL4WsO2RjmR0kRpnxYOuIQ7Hyoi5yL4pyQ1lP9uR";
-    private final String token = "868066870729076736-Lst0uVs71T0QZLz6vHNNvcyP7uYVyDM";
-    private final String secret = "CU6kAzyzJLM0uh9oqXqyDSDlgAvnpFbs6bA6Asaug0Fwm";
+    private String consumerKey = "";
+    private final String consumerSecret = "";
+    private final String token = "";
+    private final String secret = "";
 
-    List<String> terms = Lists.newArrayList("bitcoin");
+    List<String> terms = Lists.newArrayList("kafka");
 
     public TwitterProducer() {
     }
@@ -52,6 +52,16 @@ public class TwitterProducer {
 
         // create a kafka producer
         KafkaProducer<String, String> producer = createKafkaProducer();
+
+        // add shutdown hook
+        Runtime.getRuntime().addShutdownHook(new Thread(()->{
+            logger.info("stopping application...");
+            logger.info("shutting down client from twitter...");
+            client.stop();
+            logger.info("closing producer...");
+            producer.close();
+            logger.info("done!");
+        }));
 
         // loop to send tweets to kafka
         // on a different thread, or multiple different threads....
