@@ -6,8 +6,8 @@ import java.util.Optional;
 import java.util.Set;
 
 import static java.util.stream.Collectors.*;
-import static modernjavainaction.chap06.Dish.dishTags;
-import static modernjavainaction.chap06.Dish.menu;
+import static com.example.modernjava.chap06.Dish.dishTags;
+import static com.example.modernjava.chap06.Dish.menu;
 
 public class Grouping {
 

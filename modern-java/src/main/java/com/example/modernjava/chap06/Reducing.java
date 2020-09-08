@@ -1,7 +1,7 @@
 package com.example.modernjava.chap06;
 
 import static java.util.stream.Collectors.reducing;
-import static modernjavainaction.chap06.Dish.menu;
+import static com.example.modernjava.chap06.Dish.menu;
 
 public class Reducing {
 
