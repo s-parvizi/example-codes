@@ -13,6 +13,8 @@
 - Setting Custom Configuration Properties, @SpringBootTest(properties = "foo=bar")
 - Externalizing Properties with @ActiveProfiles, @ActiveProfiles("test")
 - Setting Custom Properties with @TestPropertySource, @TestPropertySource(locations = "/foo.properties")
+- Injecting Mocks with @MockBean
+- Adding Beans with @Import
 ---
 https://reflectoring.io/spring-boot-test/
 
