@@ -14,7 +14,8 @@
 - Externalizing Properties with @ActiveProfiles, @ActiveProfiles("test")
 - Setting Custom Properties with @TestPropertySource, @TestPropertySource(locations = "/foo.properties")
 - Injecting Mocks with @MockBean
-- Adding Beans with @Import
+- Adding Beans with @Import, @Import(other.namespace.Foo.class)
+- Creating a Custom @SpringBootApplication, @SpringBootTest(classes = CustomApplication.class) and @ConditionalOnProperty
 ---
 https://reflectoring.io/spring-boot-test/
 
