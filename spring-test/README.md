@@ -10,11 +10,12 @@
 
 **@SpringBootTest:**
 - Adding Auto-Configurations
-@SpringBootTest
-@AutoConfigureMockMvc
-class RegisterUseCaseIntegrationTest {
-  ...
-}
+  @SpringBootTest
+  @AutoConfigureMockMvc
+  class RegisterUseCaseIntegrationTest {
+   ...
+  }
+  
 There’s a lot of other auto-configurations available that each add other beans to the application context.
 ---
 - Setting Custom Configuration Properties
