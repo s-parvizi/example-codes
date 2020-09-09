@@ -25,3 +25,4 @@ https://reflectoring.io/spring-boot-test/
 - @TestPropertySource
 - @Import
 - @AutoConfigureTestEntityManager
+- @ContextConfiguration
