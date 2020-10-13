@@ -26,6 +26,7 @@ public MyClassTest{...}
 
 
 **@SpringBootTest:**
+- In Spring Boot, you normally use the @SpringBootTest annotation when you want to create tests that use the context. 
 - Adding Auto-Configurations, @AutoConfigureMockMvc, ...  
 - Setting Custom Configuration Properties, @SpringBootTest(properties = "foo=bar")
 - Externalizing Properties with @ActiveProfiles, @ActiveProfiles("test")
