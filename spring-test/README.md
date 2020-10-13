@@ -7,6 +7,23 @@
 - In JUnit 5, the @RunWith annotation has been replaced by the more powerful @ExtendWith annotation.
 - However, the @RunWith annotation can still be used in JUnit5 for the sake of the backward compatibility.
 - @RunWith(SpringJUnit4ClassRunner.class) and @RunWith(SpringRunner.class): SpringRunner is an alias for the SpringJUnit4ClassRunner.
+**@Mockito.mock() vs Mock vs @MockBean:** 
+- @Mock is a shorthand for the Mockito.mock() method. As well, we should only use it in a test class. Unlike the mock() method, we need to enable Mockito annotations to use this annotation. Apart from making the code more readable, @Mock makes it easier to find the problem mock in case of a failure, as the name of the field appears in the failure message
+- We can use the @MockBean to add mock objects to the Spring application context. The mock will replace any existing bean of the same type in the application context. If no bean of the same type is defined, a new one will be added. This annotation is useful in integration tests where a particular bean – for example, an external service – needs to be mocked.
+- Note that to enable Mockito annotations during test executions, the MockitoAnnotations.initMocks(this) static method has to be called.
+To avoid side effect between tests, it is advised to do it before each test execution :
+
+@Before 
+public void initMocks() {
+    MockitoAnnotations.initMocks(this);
+}
+
+Another way to enable Mockito annotations is annotating the test class with @RunWith by specifying the MockitoJUnitRunner that does this task and also other useful things :
+
+@RunWith(org.mockito.runners.MockitoJUnitRunner.class)
+public MyClassTest{...}
+- If your test needs to rely on the Spring Boot container and you want also to add or mock one of the container beans : @MockBean from Spring Boot is the way.
+
 
 **@SpringBootTest:**
 - Adding Auto-Configurations, @AutoConfigureMockMvc, ...  
