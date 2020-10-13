@@ -24,6 +24,7 @@
 
 ---
 https://reflectoring.io/spring-boot-test/
+https://thepracticaldeveloper.com/guide-spring-boot-controller-tests/
 
 **other:**
 - @AutoConfigureMockMvc
