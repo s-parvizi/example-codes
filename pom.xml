@@ -8,6 +8,7 @@
 		<module>clean-code</module>
 		<module>code-contest</module>
 		<module>data-structures</module>
+		<module>design-patterns</module>
 		<module>modern-java</module>
 		<module>kafka</module>
 		<module>multithreading</module>
