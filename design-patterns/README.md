@@ -6,6 +6,6 @@ But, in the strategy pattern we can use different method related to related obje
 
 - State Pattern and Strategy Pattern vs Visitor Pattern:  
 State pattern is being used when we have specific number of methods and we want to extend our entities
-While visitor pattern is being used while we have almost specific number of  entities and we want to extend our methods in one place in a convenient way
+While visitor pattern is being used while we have almost specific number of entities and we want to extend our methods in one place in a convenient way
 
 
