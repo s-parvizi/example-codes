@@ -2,7 +2,7 @@
 
 - State Pattern vs Strategy Pattern:  
 In the state pattern we select one state and based on it we have related implementation for our methods  
-But, in the strategy pattern we can use different method related to related object in a convenient way
+But, in the strategy pattern we can use different methods related to object in a convenient way
 
 - State Pattern and Strategy Pattern vs Visitor Pattern:  
 State pattern is being used when we have specific number of methods and we want to extend our entities
