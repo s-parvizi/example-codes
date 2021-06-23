@@ -1,9 +1,8 @@
 package com.example.modernjava.chap06;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 import static java.util.stream.Collectors.*;
 import static com.example.modernjava.chap06.Dish.dishTags;
@@ -11,7 +10,7 @@ import static com.example.modernjava.chap06.Dish.menu;
 
 public class Grouping {
 
-  enum CaloricLevel { DIET, NORMAL, FAT };
+  enum CaloricLevel { DIET, NORMAL, FAT }
 
   public static void main(String... args) {
     System.out.println("Dishes grouped by type: " + groupDishesByType());
@@ -22,7 +21,7 @@ public class Grouping {
     System.out.println("Dishes grouped by type and caloric level: " + groupDishedByTypeAndCaloricLevel());
     System.out.println("Count dishes in groups: " + countDishesInGroups());
     System.out.println("Most caloric dishes by type: " + mostCaloricDishesByType());
-    System.out.println("Most caloric dishes by type: " + mostCaloricDishesByTypeWithoutOprionals());
+    System.out.println("Most caloric dishes by type: " + mostCaloricDishesByTypeWithoutOptionals());
     System.out.println("Sum calories by type: " + sumCaloriesByType());
     System.out.println("Caloric levels by type: " + caloricLevelsByType());
   }
@@ -94,12 +93,24 @@ public class Grouping {
             reducing((Dish d1, Dish d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)));
   }
 
-  private static Map<Dish.Type, Dish> mostCaloricDishesByTypeWithoutOprionals() {
-    return menu.stream().collect(
-        groupingBy(Dish::getType,
-            collectingAndThen(
-                reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2),
-                Optional::get)));
+  private static Map<Dish.Type, Dish> mostCaloricDishesByTypeWithoutOptionals() {
+// 1:
+//    return menu.stream().collect(
+//        groupingBy(Dish::getType,
+//            collectingAndThen(
+//                reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2),
+//                Optional::get)));
+
+// 2:
+//      return menu.stream().collect(
+//              groupingBy(Dish::getType,
+//                      collectingAndThen(
+//                              maxBy(Comparator.comparingInt(Dish::getCalories)),
+//                              Optional::get)));
+
+// 3:
+      return menu.stream().collect(
+              toMap(Dish::getType, Function.identity(), BinaryOperator.maxBy(Comparator.comparingInt(Dish::getCalories))));
   }
 
   private static Map<Dish.Type, Integer> sumCaloriesByType() {
